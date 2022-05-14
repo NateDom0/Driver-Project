@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerControllerX : MonoBehaviour
 {
     private float speed = 15.0f;
-    public float rotationSpeed;
-    public float verticalInput;
+    private float rotationSpeed = 90.0f;
+    private float verticalInput;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class PlayerControllerX : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() //changed from FixedUpdate to Update
+    void FixedUpdate() //changed from FixedUpdate to Update
     {
         // get the user's vertical input (up and down)
         verticalInput = Input.GetAxis("Vertical");
